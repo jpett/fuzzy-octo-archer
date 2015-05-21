@@ -1,4 +1,5 @@
 var position = [];
+var curposition = 0;
 var toppercentage
 var pagetotal = 0;
 
@@ -7,14 +8,25 @@ $(document).ready(function() {
 			setpages();
 			createnav();
 			createbases();
-			$(window).resize(function() {
+			var resizeTimer = false;
+			/*$(window).resize(function() {
 						$(".container").css("height", $(window).innerHeight());
 						setpages();
+						//movewrap(curposition);
+						//moveball(curposition);
+			});*/
+			$(window).on('resize', function(e) {
+				clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(function(){
+					$(".container").css("height", $(window).innerHeight());
+					setpages();
+					movewrap(curposition);
+				}, 250);
 			});
 });
-
 function setpages(){
-	$(".page").each(function(i, obj) {						
+	pagetotal = 0;
+	$(".page").each(function(i, obj) {								
 						position[i] = $(this).offset().top;
 						pagetotal++;
 			});
@@ -65,6 +77,7 @@ function movewrap(pos){
 		top: 0
 	}, 1000);
 }
+curposition = pos;
 }
 
 function moveball(pos){
@@ -77,4 +90,5 @@ function moveball(pos){
 		top: 0
 	},1000)
 }
+curposition = pos;
 }
