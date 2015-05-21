@@ -1,0 +1,211 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #0f0f0f;
+  overflow: hidden; }
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  top: 0px; }
+
+/*** Bottom Navigation Buttons***/
+.page {
+  width: 100%;
+  min-height: 100%; }
+
+.holder {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0px; }
+
+.base {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: white;
+  position: relative;
+  bottom: -30px;
+  margin: 0 auto;
+  transition: all 250ms; }
+  .base:hover, .base:focus {
+    bottom: 10px;
+    cursor: pointer;
+    transition: all 750ms cubic-bezier(0.68, -0.505, 0.47, 1.4); }
+
+.innerbase {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  color: #f5f5f5; }
+  .innerbase i {
+    display: inline-block;
+    width: 50px;
+    margin: 0 auto;
+    display: block; }
+
+.nexttext {
+  font-size: 25px; }
+
+#base1 {
+  background: RGBA(228, 0, 69, 0.7); }
+
+#base2, #base5 {
+  background: white;
+  color: #0f0f0f; }
+
+#base3 {
+  background: RGBA(83, 15, 173, 0.7); }
+
+#base4 {
+  color: #0f0f0f; }
+
+#one, #two, #three, #four, #five {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  min-height: 100%; }
+
+#one {
+  background: RGBA(204, 246, 0, 0.7); }
+
+#two {
+  background: RGBA(228, 0, 69, 0.7); }
+
+#three {
+  background-image: url(http://www.h3dwallpapers.com/wp-content/uploads/2014/08/Landscape-wallpapers-4.jpg);
+  background-size: cover; }
+
+#four {
+  background: RGBA(83, 15, 173, 0.7); }
+
+#five {
+  background: RGBA(204, 246, 0, 0.7); }
+
+/**** General Themes ****/
+.container {
+  width: 960px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  max-height: 90%;
+  padding-bottom: 20px; }
+  .container p:not(.styled) {
+    padding-bottom: 75px; }
+
+.outer {
+  overflow: auto; }
+
+.scroll {
+  vertical-align: middle; }
+
+/**** Progress Bar ****/
+#progress {
+  position: fixed;
+  height: 80%;
+  width: 1%;
+  left: 5%;
+  top: 7%; }
+
+#progress-holder {
+  position: relative;
+  height: 100%;
+  margin: 0; }
+
+.ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  border: 3px solid rgba(51, 51, 51, 0.5);
+  position: absolute;
+  left: -10px;
+  z-index: 2;
+  cursor: pointer;
+  text-align: center; }
+  .ball:after {
+    content: attr(caption);
+    left: 25px;
+    color: rgba(51, 51, 51, 0.5);
+    position: relative; }
+
+#activeball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: -10px;
+  position: absolute;
+  background: #333333; }
+
+/**** styles ****/
+.styled {
+  padding-top: 10px;
+  font-family: 'Courgette', cursive;
+  font-size: 35px;
+  text-align: center; }
+  .styled span {
+    font-size: 20px; }
+
+.hidden {
+  display: none; }
+
+/***Welcome page***/
+.welcome {
+  font-size: 80px;
+  line-height: 160px; }
+
+/**** goodbye ****/
+.goodbye {
+  text-align: right; }
+
+/**** Media Queries ****/
+@media handheld, screen and (max-width: 1200px) {
+  .container {
+    width: 600px; }
+
+  .scroll p {
+    font-size: 15px; }
+
+  .styled {
+    font-size: 35px !important; } }
+@media handheld, screen and (max-width: 800px) {
+  .container {
+    width: 400px; }
+
+  .scroll p {
+    font-size: 20px; }
+
+  .styled {
+    font-size: 30px !important; } }
+@media handheld, screen and (max-width: 600px) {
+  .container {
+    width: 280px; }
+
+  #progress {
+    left: 3%; }
+
+  .scroll p {
+    font-size: 22px; }
+
+  .styled {
+    font-size: 30px !important; }
+
+  .ball:after {
+    content: "";
+    left: 25px;
+    color: black;
+    position: relative; } }
+
+/*# sourceMappingURL=octo-archer.css.map */
