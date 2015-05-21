@@ -3,25 +3,28 @@ var toppercentage
 var pagetotal = 0;
 
 $(document).ready(function() {
-			$(".scroll").css("height", $(window).innerHeight());
+			$(".container").css("height", $(window).innerHeight());
 			setpages();
 			createnav();
 			createbases();
 			$(window).resize(function() {
-						$(".scroll").css("height", $(window).innerHeight());
+						$(".container").css("height", $(window).innerHeight());
+						setpages();
 			});
 });
 
 function setpages(){
-	$(".page").each(function(i, obj) {
-						var caption = $(this).attr("pagetitle");
-						$("#progress-holder").append("<div class='ball' id='ball" + i + "' pageid='" + i + "' caption='" + caption + "' onClick='navClick(this)'></div>")
+	$(".page").each(function(i, obj) {						
 						position[i] = $(this).offset().top;
 						pagetotal++;
 			});
 }
 
 function createnav(){
+		$(".page").each(function(i, obj){
+			var caption = $(this).attr("pagetitle");
+			$("#progress-holder").append("<div class='ball' id='ball" + i + "' pageid='" + i + "' caption='" + caption + "' onClick='navClick(this)'></div>")
+		});
 	$("#progress-holder").append("<div id='activeball'></div>");
 		   toppercentage = 100 / (pagetotal - 1);
 			$(".ball").each(function(i, obj) {				
