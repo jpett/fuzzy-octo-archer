@@ -21,13 +21,14 @@ $(document).ready(function() {
 					$(".container").css("height", $(window).innerHeight());
 					setpages();
 					movewrap(curposition);
-				}, 250);
+				}, 500);
 			});
 });
 function setpages(){
 	pagetotal = 0;
 	$(".page").each(function(i, obj) {								
-						position[i] = $(this).offset().top;
+						position[i] =  Math.abs($(this).offset().top);
+						console.log(position[i]);
 						pagetotal++;
 			});
 }
