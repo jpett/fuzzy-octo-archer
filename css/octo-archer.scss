@@ -14,7 +14,7 @@ html, body{height:100%; font-family: 'Roboto', sans-serif; color:#0f0f0f; overfl
 
 .page{width:100%; min-height:100%;}
 
-.holder{width:100%; height:100px; position:absolute; bottom:0px;}
+.holder{width:100%; height:80px; position:absolute; bottom:0px;}
 
 .base{@include bases; background:white; position:relative; bottom:-30px; margin:0 auto;transition:all 250ms;
 	&:hover, &:focus{bottom:10px; cursor:pointer;  transition: all 750ms cubic-bezier(0.680, -0.505, 0.470, 1.400);}
@@ -51,7 +51,7 @@ html, body{height:100%; font-family: 'Roboto', sans-serif; color:#0f0f0f; overfl
 #five{background:RGBA(204,246,0, 0.7);}
 /**** General Themes ****/
 
-.container{width:960px; display:block; margin:0 auto; position:relative; max-height:90%; padding-bottom:20px; p:not(.styled){padding-bottom:75px;}}
+.container{width:960px; display:block; margin:0 auto; position:relative; max-height:90%; p:not(.styled){padding-bottom:75px;}}
 .outer{overflow:auto;}
 .scroll{vertical-align:middle;}
 
