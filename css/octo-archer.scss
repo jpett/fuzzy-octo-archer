@@ -78,8 +78,7 @@ p:not(.styled){padding-bottom:75px;}
 .styled{ padding-top:10px;font-family: 'Courgette', cursive; font-size:35px; text-align:center;
 span{font-size:20px;}
 }
-.row{margin-bottom:5px;}
-.column, .columns{text-align:center; background:RGBA(51, 51, 51, 0.5);}
+.column, .columns{text-align:center; background:RGBA(51, 51, 51, 0.5); margin-bottom:5px;}
 .hidden{display:none;}
 /***Welcome page***/
 .welcome{font-size:80px; line-height:160px;}
