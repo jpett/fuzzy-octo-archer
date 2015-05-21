@@ -179,6 +179,12 @@ html, body {
 .goodbye {
   text-align: right; }
 
+/**** Archer ****/
+svg {
+  margin: 0 auto;
+  width: 200px;
+  display: block; }
+
 /**** Media Queries
  * YOU MAY WELL WANT TO ADD MORE COMPLICATED MEDIA QUERIES 
  * THESE WERE DESIGNED TO BE BROAD ACTING AND WORK FOR MOST DEVICES
