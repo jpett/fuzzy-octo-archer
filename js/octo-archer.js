@@ -6,6 +6,7 @@ $(document).ready(function() {
 			$(".scroll").css("height", $(window).innerHeight());
 			setpages();
 			createnav();
+			createbases();
 			$(window).resize(function() {
 						$(".scroll").css("height", $(window).innerHeight());
 			});
@@ -26,6 +27,17 @@ function createnav(){
 			$(".ball").each(function(i, obj) {				
 						$(this).css("top", (toppercentage * i) + "%");
 			});
+}
+
+function createbases(){
+	$(".holder").each(function(i,obj){
+		var basetext = $(this).attr("basetext");
+		var arrow = "fa fa-arrow-down fa-3x fa-fw";
+		if(i == (pagetotal-1)){
+			arrow ="fa fa-arrow-up fa-3x fa-fw";
+		}
+		$(this).append("<div class='base' onclick='baseclick(this)'><div  id='base"+(i+1)+"' page-id='"+(i+1)+"' class='innerbase'><i class='"+arrow+"'></i><span class='nexttext'>"+basetext+"</span></div></div>");
+	});
 }
 
 function baseclick(e){
