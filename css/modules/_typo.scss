@@ -1,4 +1,11 @@
+html, body{ font-family: 'Roboto', sans-serif; color:$dark;}
 .fontstyle{font-family: 'Courgette', cursive;}
+.__textlight{
+	color:$dark;
+}
+.__textdark{
+	colro:$light;
+}
 .__textcenter{
 	 text-align:center;
 }
