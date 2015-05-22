@@ -229,7 +229,11 @@ html, body {
   color: #0f0f0f; }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Courgette', cursive; }
+  font-family: 'Courgette', cursive;
+  margin-top: 0; }
+
+h2, h4 {
+  text-decoration: underline; }
 
 h1 {
   font-size: 55px; }
