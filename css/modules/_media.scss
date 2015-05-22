@@ -1,0 +1,21 @@
+/**** Media Queries
+ * YOU MAY WELL WANT TO ADD MORE COMPLICATED MEDIA QUERIES 
+ * THESE WERE DESIGNED TO BE BROAD ACTING AND WORK FOR MOST DEVICES
+ ****/
+@media handheld, screen and (max-width:1200px){
+	.container{width:600px;}
+	.scroll p{font-size:15px;}
+	.styled{font-size:35px !important;}
+}
+@media handheld, screen and (max-width:800px){
+	.container{width:400px;}
+	.scroll p{font-size:20px;}
+	.styled{font-size:30px !important;}
+}
+@media handheld, screen and (max-width:600px){
+	.container{width:280px;}
+	#progress{left:3%;}
+	.scroll p{font-size:22px;}
+	.styled{font-size:30px !important;}
+	.ball:after{content:"";left:25px; color:black; position:relative;}
+}
