@@ -1,7 +1,9 @@
 # octo-archer
 An animated one page website template.
 
-So i got bored and decided to make a one page website template. Its not much and it comes with very few stylings out of the box.
+So i got bored and decided to make a one page website template. 
+
+A few stylings out of the box, basic typography, basic forms. (images and more to come).
 
 It does however have the ability to add as many pages as you like(within reason).
 
