@@ -3,7 +3,7 @@ $vlarge:55px;
 $large:35px;
 $med:25px;
 $small:15px;
-h1,h2,h3,h4,h5{font-family: 'Courgette', cursive; margin-top:0;}
+h1,h2,h3,h4,h5{ margin-top:0;}
 h2, h4{text-decoration: underline;}
 h1{font-size: $vlarge;}
 h2{font-size: $large;}
@@ -11,24 +11,27 @@ h3{font-size: $med;}
 h4{font-size: $small;}
 h5{font-size: $small;}
 .fontstyle{font-family: 'Courgette', cursive;}
-.__textlight{
+.textlight{
 	color:$dark;
 }
-.__textdark{
+.textdark{
 	color:$light;
 }
-.__textcenter{
+.textcenter{
 	 text-align:center;
 }
-.__fonthug{
+.textright{
+	text-align:right;
+}
+.fonthug{
 	font-size:$vlarge;
 }
-.__fontlar{
+.fontlar{
 	font-size:$large;
 }
-.__fontmed{
+.fontmed{
 	font-size:$med;
 }
-.__fontsma{
+.fontsma{
 	font-size:$small;
 }
