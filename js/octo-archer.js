@@ -10,11 +10,19 @@ $(document).ready(function() {
 			createbases();
 			var resizeTimer = false;
 			$(window).on('resize', function(e) {
-					var curpos = $("#wrap").css("top");
+					var oldheight = parseInt($(".container").css("height"));
+					var newheight = $(window).innerHeight();
+					var difference = oldheight - newheight;
+					console.log("oldheight: "+oldheight + "- newheight" + newheight + "= differenece" + difference);
+					$(".container").css("height", $(window).innerHeight());
+					var curtop = parseInt($("#wrap").css("top"));
+					$("#wrap").css("top", (curtop + difference)+"px");
+					setpages();
+					/*var curpos = $("#wrap").css("top");
 					$(".container").css("height", $(window).innerHeight());
 					$("#wrap").css("top", 0);
 					$("#activeball").css("top", 0);
-					setpages();
+					setpages();*/
 			});
 });
 function setpages(){
