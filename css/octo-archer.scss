@@ -6,6 +6,8 @@
 	border-radius:50%;
 	width:150px; height:150px;
 }
+$colors : #9B59B6, #3498DB, #E74C3C, #1ABC9C;
+$basecolors : #3498DB, #E74C3C, #1ABC9C, #9B59B6;
 *{margin:0; padding:0; box-sizing:border-box;}
 
 html, body{height:100%; font-family: 'Roboto', sans-serif; color:#0f0f0f; overflow:hidden;}
@@ -53,26 +55,35 @@ p:not(.styled){padding-bottom:75px;}
 #activeball{width:25px; height:25px; border-radius:50%; left:-10px; position:absolute;background:rgba(51, 51, 51, 1);}
 /****THESE ARE THE STYLES FOR THE COLORS AND PICTURE 
 *	 OF THE DIFFERENT PAGES FEEL FREE TO CUT THEM OUT 
-*	 AND CREATE YOUR OWN ***************************/
+*	 AND CREATE YOUR OWN 
+**************************************************/
 
 /***PAGE & BASE COLORS *****/
-#base1{background:RGBA(228,0,69, 0.7);}
+@for $i from 1 through length($colors) {
+    .page:nth-child(#{length($colors)}n+#{$i}) {
+        background: nth($colors, $i)
+    }
+}
+/** If the number of pages is more than the number 
+**  of colors we have to loop twice. 
+**  As the #base elements are nested so we cant 
+**  use :nth-child like pages
+***************************************************/
+@for $i from 1 through length($basecolors) {
+    #base#{$i}{
+		background: nth($basecolors, $i);
+	}
+	#base#{$i+length($basecolors)}{
+		background: nth($basecolors, $i);
+	}
+}
 
-#base2, #base5, #base6{background:white; color:#0f0f0f;}
-
-#base3{background:RGBA(83,15,173, 0.7);}
-
-#base4{color:#0f0f0f;}
-
-#one{background:RGBA(204,246,0, 0.7);}
-
-#two{background:RGBA(228,0,69, 0.7);}
-
+/** Overide Specific Pages 
+**  This doesnt effect the 
+**  "flow" of page colors
+****************************/
 #three{background-image:url(http://www.h3dwallpapers.com/wp-content/uploads/2014/08/Landscape-wallpapers-4.jpg); background-size:cover;}
 
-#four{background:RGBA(83,15,173, 0.7);}
-
-#five{background:RGBA(204,246,0, 0.7);}
 
 /**** styles ****/
 .styled{ padding-top:10px;font-family: 'Courgette', cursive; font-size:35px; text-align:center;
