@@ -1,5 +1,5 @@
 var position = [];
-var curposition = 0;
+var curposition = 1;
 var toppercentage
 var pagetotal = 0;
 
@@ -10,14 +10,47 @@ $(document).ready(function() {
 			createbases();
 			var resizeTimer = false;
 			$(window).on('resize', function(e) {
-					var oldheight = parseInt($(".container").css("height"));
+					switch(curposition){
+						case 1:
+						$(".container").css("height", $(window).innerHeight());
+						setpages();
+						break;
+						case 2:
+						$(".container").css("height", $(window).innerHeight());
+						var hig = $(".container").css("height");
+						console.log(hig);
+						$("#wrap").css("top", -(parseInt(hig)) + "px");
+						break;
+						case 3:
+						$(".container").css("height", $(window).innerHeight());
+						var hig = $(".container").css("height");
+						console.log(hig);
+						$("#wrap").css("top", -(parseInt(hig)*2) + "px");
+						break;					
+						case 4:
+						$(".container").css("height", $(window).innerHeight());
+						var hig = $(".container").css("height");
+						console.log(hig);
+						$("#wrap").css("top", -(parseInt(hig)*3) + "px");
+						break;
+					}
+					
+					
+					/*var oldheight = parseInt($(".container").css("height"));
 					var newheight = $(window).innerHeight();
 					var difference = oldheight - newheight;
 					console.log("oldheight: "+oldheight + "- newheight" + newheight + "= differenece" + difference);
 					$(".container").css("height", $(window).innerHeight());
 					var curtop = parseInt($("#wrap").css("top"));
-					$("#wrap").css("top", (curtop + difference)+"px");
-					setpages();
+					console.log(curposition);
+					if(curposition != 0 && curposition != 1){
+						$("#wrap").css("top", (curtop - (difference))+"px");
+						
+					} else {
+						setpages();
+					}
+					
+					
 					/*var curpos = $("#wrap").css("top");
 					$(".container").css("height", $(window).innerHeight());
 					$("#wrap").css("top", 0);
@@ -78,7 +111,7 @@ function movewrap(pos){
 		top: 0
 	}, 1000);
 }
-curposition = pos;
+curposition = (parseInt(pos)+1);
 }
 
 function moveball(pos){
@@ -91,5 +124,5 @@ function moveball(pos){
 		top: 0
 	},1000)
 }
-curposition = pos;
+curposition = (parseInt(pos)+1);
 }
