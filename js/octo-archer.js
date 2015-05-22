@@ -9,26 +9,18 @@ $(document).ready(function() {
 			createnav();
 			createbases();
 			var resizeTimer = false;
-			/*$(window).resize(function() {
-						$(".container").css("height", $(window).innerHeight());
-						setpages();
-						//movewrap(curposition);
-						//moveball(curposition);
-			});*/
 			$(window).on('resize', function(e) {
-				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(function(){
+					var curpos = $("#wrap").css("top");
 					$(".container").css("height", $(window).innerHeight());
+					$("#wrap").css("top", 0);
+					$("#activeball").css("top", 0);
 					setpages();
-					movewrap(curposition);
-				}, 500);
 			});
 });
 function setpages(){
 	pagetotal = 0;
 	$(".page").each(function(i, obj) {								
 						position[i] =  Math.abs($(this).offset().top);
-						console.log(position[i]);
 						pagetotal++;
 			});
 }
