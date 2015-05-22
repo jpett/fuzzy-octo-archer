@@ -1,0 +1,39 @@
+$smapad: 10px;
+$medpad: 30px;
+$larpad: 50px;
+.__padbotlar{
+	padding-bottom:$larpad;
+}
+.__padbotmed{
+	padding-bottom:$medpad;
+}
+.__padbotsma{
+	padding-bottom:$smapad;
+}
+.__padtoplar{
+	padding-top:$larpad;
+}
+.__padtopmed{
+	padding-top:$medpad;
+}
+.__padtopsma{
+	padding-top:$smapad;
+}
+.__padleftlar{
+	padding-left:$larpad;
+}
+.__padleftmed{
+	padding-left:$medpad;
+}
+.__padleftsma{
+	padding-left:$smapad;
+}
+.__padriglar{
+	padding-right:$larpad;
+}
+.__padrigmed{
+	padding-right:$medpad;
+}
+.__padrigsma{
+	padding-right:$smapad;
+}
