@@ -1,23 +1,33 @@
 html, body{ font-family: 'Roboto', sans-serif; color:$dark;}
+$vlarge:55px;
+$large:35px;
+$med:25px;
+$small:15px;
+h1,h2,h3,h4,h5{font-family: 'Courgette', cursive;}
+h1{font-size: $vlarge;}
+h2{font-size: $large;}
+h3{font-size: $med;}
+h4{font-size: $small;}
+h5{font-size: $small;}
 .fontstyle{font-family: 'Courgette', cursive;}
 .__textlight{
 	color:$dark;
 }
 .__textdark{
-	colro:$light;
+	color:$light;
 }
 .__textcenter{
 	 text-align:center;
 }
 .__fonthug{
-	font-size:55px;
+	font-size:$vlarge;
 }
 .__fontlar{
-	font-size:35px;
+	font-size:$large;
 }
 .__fontmed{
-	font-size:25px;
+	font-size:$med;
 }
 .__fontsma{
-	font-size:15px;
+	font-size:$small;
 }
