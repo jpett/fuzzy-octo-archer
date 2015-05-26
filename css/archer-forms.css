@@ -238,6 +238,9 @@ h4 {
 h5 {
   font-size: 15px; }
 
+.pagetitle {
+  font-size: 35px; }
+
 .fontstyle {
   font-family: 'Courgette', cursive; }
 
@@ -264,6 +267,14 @@ h5 {
 
 .fontsma {
   font-size: 15px; }
+
+a {
+  color: #0f0f0f;
+  text-decoration: underline; }
+
+a:hover {
+  color: #f5f5f5;
+  font-weight: 900; }
 
 .padbotlar {
   padding-bottom: 50px; }

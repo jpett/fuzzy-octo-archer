@@ -10,6 +10,7 @@ h2{font-size: $large;}
 h3{font-size: $med;}
 h4{font-size: $small;}
 h5{font-size: $small;}
+.pagetitle{font-size: $large;}
 .fontstyle{font-family: 'Courgette', cursive;}
 .textlight{
 	color:$dark;
@@ -35,3 +36,5 @@ h5{font-size: $small;}
 .fontsma{
 	font-size:$small;
 }
+a{color:$dark; text-decoration: underline;}
+a:hover{color:$light; font-weight:900;}
