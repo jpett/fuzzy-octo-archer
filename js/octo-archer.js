@@ -78,6 +78,28 @@ function navClick(e) {
 			moveball(pageid);
 }
 
+function sidereveal(e){
+			var elem = e;
+			if($(elem).hasClass("sideholder")){
+				$(elem).parent().css("left", "10%");
+				$(elem).html("<i class='fa fa-arrow-down fa-3x fa-fw'></i>");
+				$(elem).next().children(".sidesnippet").fadeOut(500);	
+				setTimeout(function(){
+				  $(elem).next().children(".sidemaincontent").fadeIn(500);
+				}, 500);
+				$(elem).removeClass().addClass("sideholderextended");
+			} else {
+				$(elem).parent().css("left", "100%");
+				$(elem).html("<i class='fa fa-arrow-up fa-3x fa-fw'></i>");
+				$(elem).next().children(".sidemaincontent").fadeOut(500);	
+				setTimeout(function(){
+				  $(elem).next().children(".sidesnippet").fadeIn(500);	
+				}, 500);
+				$(elem).removeClass().addClass("sideholder");
+			}
+}
+			
+
 function movewrap(pos){
 	if(pos!= pagetotal){
 	$("#wrap").animate({
